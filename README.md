@@ -169,7 +169,7 @@ git init
 git add .
 git commit -m "Initial commit - Flask CI/CD demo"
 git branch -M main
-git remote add origin https://github.com/<your-username>/ci-cd-docker-demo.git
+git remote add origin https://github.com/sasidharkk/ci-cd-docker-demo.git
 git push -u origin main
 
 
@@ -248,9 +248,9 @@ In your GitHub repo:
 
 Go to Settings → Secrets and variables → Actions → New repository secret
 
-Name: DOCKER_HUB_USERNAME → your Docker Hub username
+Name: DOCKER_HUB_USERNAME → your Docker Hub username (sasidhark84)
 
-Name: DOCKER_HUB_ACCESS_TOKEN → your Docker Hub token
+Name: DOCKER_HUB_ACCESS_TOKEN → your Docker Hub token (secrte token private)
 
 STEP 11 — Check GitHub Actions
 
@@ -265,20 +265,20 @@ You should see:
 
 After success, check your Docker Hub → new image will appear:
 
-docker.io/<your-username>/ci-cd-docker-demo:latest
+docker.io/sasidhark84/ci-cd-docker-demo:latest
 
 STEP 12 — Deploy Locally
 
 Option A: Run with Docker
-docker pull <your-username>/ci-cd-docker-demo:latest
-docker run -d -p 5000:5000 <your-username>/ci-cd-docker-demo:latest
+docker pull sasidhark84/ci-cd-docker-demo:latest
+docker run -d -p 5000:5000 sasidhark84/ci-cd-docker-demo:latest
 
 
 Open: http://localhost:5000
 
 Option B: Deploy with Minikube
 minikube start
-kubectl create deployment ci-cd-demo --image=<your-username>/ci-cd-docker-demo:latest
+kubectl create deployment ci-cd-demo --image=sasidhark84/ci-cd-docker-demo:latest
 kubectl expose deployment ci-cd-demo --type=NodePort --port=5000
 minikube service ci-cd-demo
 
@@ -307,7 +307,7 @@ Deliverables
 
 Item	Description
 GitHub Repo	Contains code and .github/workflows/ci-cd.yml
-Docker Hub Image	https://hub.docker.com/r/<your-username>/ci-cd-docker-demo
+Docker Hub Image	https://hub.docker.com/r/sasidhark84/ci-cd-docker-demo
 Workflow Screenshot	Show successful build & push
 Deployed App Screenshot	Show running app in browser
 
@@ -324,7 +324,7 @@ App URL: http://localhost:5000
 
 Message: Hello from CI/CD Pipeline!
 
-Docker Hub Image: https://hub.docker.com/r/yourusername/ci-cd-docker-demo
+Docker Hub Image: https://hub.docker.com/r/sasidhark84/ci-cd-docker-demo
 
 GitHub Actions: All steps green ✅
 
