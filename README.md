@@ -16,7 +16,7 @@ Pushes the image to Docker Hub
 
 Deploys locally using Docker or Minikube
 
-@@@@@@@@@@@@@@@@@  Tools Used  @@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@@@@@@@   Tools Used   @@@@@@@@@@@@@@@@@@@@@@@@@@
 
 GitHub Actions – CI/CD automation
 
